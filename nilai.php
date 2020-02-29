@@ -22,7 +22,7 @@ $id_user=$_SESSION['id_user'];
                                     <thead>
                                         <tr>
                                             <th>No</th>
-											<th>Matakuliah</th>
+											<th>Mata Pelajaran</th>
 											<th>Tanggal</th>
                                             <th>Benar</th>
                                             <th>Salah</th>

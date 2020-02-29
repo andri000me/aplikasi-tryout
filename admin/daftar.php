@@ -30,7 +30,7 @@
 										
 										 <div class="form-group">
                                             <label>Password</label>
-                                            <input name="password" class="form-control" placeholder="password" />
+                                            <input type="password" name="password" class="form-control" placeholder="password" />
                                         </div>
 										 <div class="form-group">
                                             <label>Gambar</label>
@@ -69,14 +69,6 @@
 					  echo "<td>$k[nisn]</td>";
 					   echo "<td>$k[notlp]</td>";
 					   echo "<td>$k[alamat]</td>";
-					  //echo "<td>$k[jam]</td>";
-					  //echo "<td>$k[status]</td>";
-					 //echo "<td>$k[tanggal_lahir]</td>";
-					  //echo "<td>$k[jenis_kelamin]</td>";
-					  //echo "<td>$k[jabatan]</td>";
-					  //echo "<td>$k[alamat]</td>";
-					  //echo "<td>$k[agama]</td>";
-					  //echo "<td>$k[kewarganegaraan]</td>";
 					  echo "</tr>";
                       $no++;
                     }  

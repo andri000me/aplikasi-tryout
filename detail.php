@@ -26,6 +26,7 @@ $waktu=<?php echo"$z[timers]"; ?>;
                 var frmSoal = document.getElementById("frmSoal");
                 frmSoal.submit();
              } else {
+
                 setTimeout(runTimer, 1000);
              }
           }
@@ -38,7 +39,7 @@ $waktu=<?php echo"$z[timers]"; ?>;
 <h2>Soal ujian untuk, <strong><?php echo ucwords($_SESSION['username']);?></strong></h2>
                             <div class="alert alert-info alert-dismissable">
                                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                               Jawablah pertanyaan berikut dengan tepat dan cepat. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi, <a href="#" class="alert-link">Selamat mengerjakan, <?php echo ucwords($_SESSION['username']);?></a>.
+                               Jawablah pertanyaan berikut dengan tepat dan cepat.  <a href="#" class="alert-link">Selamat mengerjakan, <?php echo ucwords($_SESSION['username']);?></a>.
                             </div>
 							
 	

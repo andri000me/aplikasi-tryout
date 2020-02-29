@@ -16,6 +16,7 @@ if(isset($_SESSION['id_user'])){
 			$pilihan=$_POST["pilihan"];
 			$id_soal=$_POST["id"];
 			$jumlah=$_POST['jumlah'];
+			$score=$_POST['point'];
 			$kategori=$_POST['kategori'];
 			
 			$score=0;
@@ -49,7 +50,7 @@ if(isset($_SESSION['id_user'])){
 					}
 					
 				} 
-				$score = ($benar*100)/$jumlah;
+				$score = ($benar*100/$jumlah);
 			}
 		$z=mysql_fetch_array(mysql_query("select * from kategori where id_kategori ='$kategori'"));
 		
@@ -58,9 +59,9 @@ if(isset($_SESSION['id_user'])){
 		
 		<form action="?page=simpan" method="post">
 		<table class="text-muted" width="100%" border="0">
-		 <p class="text-muted">Matakuliah: <?php echo"$z[nama_kategori]";?> </p>
+		 <p class="text-muted">Mata Pelajaran: <?php echo"$z[nama_kategori]";?> </p>
 		<tr>
-			<td width="12%"><span class="text-muted color-bottom-txt"><i class="fa fa-edit"></i>Benar</span></td><td width="88%"> = <span class="btn btn-success btn-lg"><?php echo $benar;?></span> Soal Beanr X 100/jumlah soal</td>
+			<td width="12%"><span class="text-muted color-bottom-txt"><i class="fa fa-edit"></i>Benar</span></td><td width="88%"> = <span class="btn btn-success btn-lg"><?php echo $benar;?></span> Soal Benar X 100/jumlah soal</td>
 		</tr>
 		<tr>
 			<td><span class="text-muted color-bottom-txt"><i class="fa fa-edit"></i>Salah</span></td> <td> = <span class="btn btn-danger btn-lg"><?php echo $salah;?></span> soal </td>

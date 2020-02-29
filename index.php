@@ -114,14 +114,16 @@ else { if (h <= 23) { document.write('Selamat malam, pengunjung...'); }
 			 $tampil=mysql_query("select * from tabel_user where id_user=$_SESSION[id_user]");
 					  
                       while($k=mysql_fetch_array($tampil)){
-               
-					  echo "<td><center><strong></strong><img src =images/".$k['Gambar']." width='147' height='144' style = &rdquo;float:left;&rdquo><center /></td>";
-					  echo "<td>$k[nama]</td>";
-	
-                    }  
-
-             
-                    ?>
+               ?>
+					 <!-- echo "<td><center><strong></strong><img src="images/.$k['Gambar']." width='147' height='144' style = &rdquo;float:left;&rdquo><center /></td>"; -->
+					   <!-- echo "<td>$k[nama]</td>"; -->
+	<td><?= $k['nama'] ?></td>
+    <td>
+    <strong>
+    <img src="images/<?= $k['Gambar'] ?>" alt="gambar profil" width='147' height='144' style = &rdquo;float:left;&rdquo>
+    </strong>
+    </td>
+                 <?php   } ?>
 					
 				<?php
 					}else{
@@ -188,11 +190,7 @@ else { if (h <= 23) { document.write('Selamat malam, pengunjung...'); }
             </div>
                 <!-- /. ROW  -->
             <?php if(isset($_SESSION['id_user'])){ ?>
-                <div class = 'row2' style="text-align: justify; font-family: 'Times New Roman, serif';">               
-                <h3>
-                   <span style="font-weight: bold;"> Untuk Menjawab Soal,</span><br> <br>
-                   Caranya pilih menu mata pelajaran -> lalu pilih paket dari mata pelajaran yang dipilih, lalu isi soal yang ada di aplikasi tersebut, setelah mengisi jawaban klik tombol selesai. Setelah itu anda akan langsung mendapatkan nilai dari pertanyaan yang anda jawab.
-                </h3> </div>
+                
                 <?php
                 } else {?>
             <div class = "row1" style= "text-align: justify; font-family: 'Times New Roman, serif' ;">

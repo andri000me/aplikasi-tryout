@@ -32,6 +32,7 @@
 					<th width="20%">Nama</th>
 					<th width="10%">NISN</th>
 					<th>Alamat</th>
+					<th>No Tlp</th>
 					<th>Point</th>  
 					<th>Status</th>  
 			
@@ -41,7 +42,7 @@
                     <?php
                	    include "koneksi.php";
 				 	  //$tgl = date('Y-m-d');
-					   $tampil=mysql_query("select tabel_nilai.tanggal, tabel_nilai.point, tabel_user.nama_user, tabel_user.nisn, tabel_user.alamat from tabel_nilai inner join tabel_user on tabel_nilai.id_user = tabel_user.id_user ");
+					   $tampil=mysql_query("select tabel_nilai.tanggal, tabel_nilai.point, tabel_user.nama_user, tabel_user.nisn, tabel_user.alamat, tabel_user.notlp from tabel_nilai inner join tabel_user on tabel_nilai.id_user = tabel_user.id_user ");
 					  $no = 1;	  
                       while($k=mysql_fetch_array($tampil)){
                       echo "<tr>";
@@ -50,15 +51,10 @@
 					  echo "<td>$k[nama_user]</td>";
 					  echo "<td>$k[nisn]</td>";
 					   echo "<td>$k[alamat]</td>";
+					   echo "<td>$k[notlp]</td>";
 					    echo "<td>$k[point]</td>";
 						  ?> <td><?php if  ($k['point'] >75) {echo "<span class='btn btn-success btn-lg'>lulus</span>";} else {echo"<span class='btn btn-danger btn-lg'>tidak lulus</span>";}?></span></td><?php
-					  //echo "<td>$k[status]</td>";
-					 //echo "<td>$k[tanggal_lahir]</td>";
-					  //echo "<td>$k[jenis_kelamin]</td>";
-					  //echo "<td>$k[jabatan]</td>";
-					  //echo "<td>$k[alamat]</td>";
-					  //echo "<td>$k[agama]</td>";
-					  //echo "<td>$k[kewarganegaraan]</td>";
+					  
 					  echo "</tr>";
                       $no++;
                     }  
