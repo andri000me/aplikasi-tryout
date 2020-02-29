@@ -16,7 +16,6 @@ if(isset($_SESSION['id_user'])){
 			$pilihan=$_POST["pilihan"];
 			$id_soal=$_POST["id"];
 			$jumlah=$_POST['jumlah'];
-			$score=$_POST['point'];
 			$kategori=$_POST['kategori'];
 			
 			$score=0;
@@ -50,7 +49,7 @@ if(isset($_SESSION['id_user'])){
 					}
 					
 				} 
-				$score = ($benar*100/$jumlah);
+				$score = ($benar*100)/$jumlah;
 			}
 		$z=mysql_fetch_array(mysql_query("select * from kategori where id_kategori ='$kategori'"));
 		

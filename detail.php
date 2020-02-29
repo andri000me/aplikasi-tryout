@@ -91,7 +91,8 @@ var myCountdown2 = new Countdown({
 			<input type="hidden" name="id[]" value=<?php echo $id; ?>>
 			<input type="hidden" name="jumlah" value=<?php echo $jumlah; ?>>
 			<input type="hidden" name="kategori" value=<?php echo $kategori; ?>>
-			<table width="457" border="0">
+			
+			<!-- <table width="457" border="0">
 			<tr>
 			  	<td width="17"><?php echo $urut=$urut+1; ?></font></td>
 			  	<td width="430"><?php echo "$pertanyaan"; ?></font></td>
@@ -112,6 +113,31 @@ var myCountdown2 = new Countdown({
 				<td>&nbsp;</td>
 			  	<td>D. <input name="pilihan[<?php echo $id; ?>]" type="radio" value="D"> <?php echo "$pilihan_d";?></font> </td>
             </tr>
+			</table> -->
+
+			
+
+			<table class="table table-borderless">
+				<tr>
+					<td width="17"><?= $urut=$urut++?></td>
+					<td style="text-align: left"><?= $pertanyaan ?></td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td>A. <input type="radio" value="A" name="pilihan[<?= $id; ?>]"> <?= $pilihan_a ?></td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td>B. <input type="radio" value="B" name="pilihan[<?= $id; ?>]"> <?= $pilihan_b ?></td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td>C. <input type="radio" value="C" name="pilihan[<?= $id; ?>]"> <?= $pilihan_c ?></td>	
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td>D. <input type="radio" value="D" name="pilihan[<?= $id; ?>]"> <?= $pilihan_d ?></td>
+				</tr>
 			</table>
 		<?php
 		}
