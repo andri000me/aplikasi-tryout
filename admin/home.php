@@ -121,7 +121,6 @@ else { if (h <= 23) { document.write('Selamat malam, pengunjung...'); }
                 <!--End Advanced Tables -->
               </div>
             </div>
-                <!-- /. ROW  -->
                 
         </div>
                
